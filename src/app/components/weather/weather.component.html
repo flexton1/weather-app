@@ -1,5 +1,7 @@
+
+<div class="heading-section"><h1 class="text-center mt-3 animate__animated animate__fadeInRight"><a routerLink="/home"><i class="fa fa-cloud" aria-hidden="true"></i>Weather app</a></h1></div>
+
 <div class="container">
-<h1 class="text-center mt-3 animate__animated animate__fadeInRight"><i class="fa fa-cloud" aria-hidden="true"></i>Weather app</h1>
 <div class="animate__animated animate__fadeInLeft">
   <div class="row">
     <div class="col-md-6">
@@ -49,6 +51,10 @@
       <p class="text-center">
         Location Searched: <span *ngIf="this.weatherData" class="animate__animated animate__fadeInLeft"> {{ this.weatherData?.location.name }} ,</span>
         <span *ngIf="this.weatherData" class="animate__animated animate__fadeInLeft"> {{ this.weatherData?.location.country }}</span>
+      </p>
+      <p class="text-center">
+        Last time updated: 
+        <span *ngIf="this.weatherData" class="animate__animated animate__fadeInLeft"> {{ this.weatherData?.current.last_updated }}</span>
       </p>
     </div>
   </div>
